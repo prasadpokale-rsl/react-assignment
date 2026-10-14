@@ -1,0 +1,154 @@
+.app {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.app h1 {
+  text-align: center;
+}
+
+.todo-input {
+  margin-bottom: 24px;
+}
+
+.todo-input h2 {
+  margin-bottom: 12px;
+}
+
+.todo-input input {
+  padding: 10px;
+  width: 65%;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 9px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todo-input button {
+  background-color: #007bff;
+  color: white;
+}
+
+.todo-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.todo-filters button {
+  background-color: #007bff;
+  color: white;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.todo-item span {
+  overflow-wrap: anywhere;
+}
+
+.completed {
+  color: green;
+  text-decoration: line-through;
+}
+
+.todo-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.todo-actions button {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+.todo-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.todo-actions button:nth-of-type(1) {
+  background-color: silver;
+  color: black;
+}
+
+.todo-actions button:nth-of-type(2) {
+  background-color: #dc3545;
+  color: white;
+}
+
+.edit-input {
+  flex: 1;
+  min-width: 0;
+  padding: 9px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+
+@media (max-width: 600px) {
+  .app {
+    margin: 20px auto;
+    padding: 12px;
+  }
+
+  .todo-input input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  .todo-item {
+    align-items: flex-start;
+  }
+
+  .todo-actions {
+    flex-wrap: wrap;
+  }
+}
+
+.todo-actions .delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.todo-actions .todo-edit-button {
+  background-color: silver;
+  color: black;
+}
+
+.todo-filters button {
+  opacity: 1;
+}
+
+.todo-filters button.selected-filter {
+  opacity: 0.6;
+}
+
+.empty-message {
+  text-align: center;
+  margin-top: 24px;
+  color: #666;
+}
